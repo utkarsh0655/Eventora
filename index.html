@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover inspiring events, connect with people, and register for your next experience with Eventora." />
+  <title>Eventora — Find your next experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Eventora home"><span class="brand-mark">e</span> eventora<span class="brand-dot">.</span></a>
+      <div class="nav-links">
+        <a href="#events">Explore events</a>
+        <a href="#about">About</a>
+        <a href="#footer">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">☾</button>
+        <a class="btn btn-dark nav-cta" href="#events">Find an event <span>↗</span></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR CITY. YOUR PEOPLE. YOUR MOMENT.</div>
+          <h1>Make room for<br><span class="serif-accent">something</span> memorable.</h1>
+          <p class="hero-description">Discover experiences that bring people together. From big ideas to good music, find your next reason to get out there.</p>
+          <div class="hero-actions">
+            <a href="#events" class="btn btn-primary">Explore events <span>↗</span></a>
+            <a href="#about" class="text-link">How it works <span>→</span></a>
+          </div>
+          <div class="hero-social-proof">
+            <div class="avatar-stack">
+              <span>R</span><span>A</span><span>M</span><span>+</span>
+            </div>
+            <div><strong>2,400+</strong><small>people finding their next thing</small></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image" role="img" aria-label="People enjoying a live event"></div>
+          <div class="floating-card float-top">
+            <span class="mini-icon">✦</span>
+            <div><strong>Good things happen</strong><small>when we show up.</small></div>
+          </div>
+          <div class="floating-card float-bottom">
+            <div class="live-dot"></div><div><strong>12 events</strong><small>coming up this month</small></div>
+            <span class="card-arrow">↗</span>
+          </div>
+          <div class="hero-scribble">✳</div>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>SCROLL TO DISCOVER</span><span class="scroll-line"></span><span>01 / 03</span>
+      </div>
+    </section>
+
+    <section class="events-section section-padding" id="events">
+      <div class="container">
+        <div class="section-heading">
+          <div><div class="eyebrow">THE GOOD STUFF</div><h2>Find your <span class="serif-accent">next</span> event.</h2></div>
+          <p>Curated experiences for curious minds.<br>Pick a date, bring a friend, make a memory.</p>
+        </div>
+        <div class="event-tools">
+          <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search events, venues, or keywords..." aria-label="Search events"></div>
+          <div class="filter-wrap" id="categoryFilters" aria-label="Filter by category">
+            <button class="filter-chip active" data-category="All">All events <span id="allCount">06</span></button>
+            <button class="filter-chip" data-category="Music">Music</button>
+            <button class="filter-chip" data-category="Technology">Technology</button>
+            <button class="filter-chip" data-category="Art & Culture">Art & Culture</button>
+            <button class="filter-chip" data-category="Lifestyle">Lifestyle</button>
+          </div>
+        </div>
+        <div class="event-grid" id="eventGrid"></div>
+        <div class="empty-state hidden" id="emptyState"><div>☁</div><h3>No events found</h3><p>Try another search or category.</p><button class="btn btn-outline" id="resetFilters">Reset filters</button></div>
+        <div class="section-bottom"><span id="eventCount">Showing 6 events</span><span class="section-note">More moments. Less scrolling.</span></div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="about">
+      <div class="container feature-grid">
+        <div class="feature-image">
+          <div class="feature-photo"></div>
+          <div class="feature-stamp">MAKE<br>IT COUNT <span>✳</span></div>
+        </div>
+        <div class="feature-copy">
+          <div class="eyebrow">A LITTLE MORE LIFE</div>
+          <h2>Less staying in.<br><span class="serif-accent">More stories</span> to tell.</h2>
+          <p>Eventora makes it easier to find the things worth showing up for. Discover a community, learn something new, or simply spend an evening differently.</p>
+          <div class="feature-points">
+            <div><span class="point-number">01</span><div><strong>Find your people</strong><small>Discover events around the things you love.</small></div></div>
+            <div><span class="point-number">02</span><div><strong>Make it happen</strong><small>Register in a few clicks. No complicated steps.</small></div></div>
+            <div><span class="point-number">03</span><div><strong>Show up curious</strong><small>Collect moments, not just plans.</small></div></div>
+          </div>
+          <a href="#events" class="btn btn-dark">Explore the lineup <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter-section">
+      <div class="container newsletter-inner">
+        <div><div class="eyebrow">THE EVENTORA EDIT</div><h2>Good plans, <span class="serif-accent">delivered.</span></h2><p>Get a monthly dose of events worth leaving home for.</p></div>
+        <form id="newsletterForm" class="newsletter-form"><input type="email" id="newsletterEmail" placeholder="Your email address" aria-label="Email address" required><button class="btn btn-primary" type="submit">Count me in ↗</button><small id="newsletterMessage">No spam. Just the good stuff.</small></form>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer"><div class="container footer-inner"><a class="brand" href="#home"><span class="brand-mark">e</span> eventora<span class="brand-dot">.</span></a><span>Made for moments that matter.</span><span>© 2026 Eventora</span></div></footer>
+
+  <div class="modal-backdrop hidden" id="eventModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="event-modal">
+      <button class="modal-close" id="closeModal" aria-label="Close event details">×</button>
+      <div class="modal-image" id="modalImage"></div>
+      <div class="modal-content">
+        <div class="eyebrow" id="modalCategory">EVENT DETAILS</div>
+        <h2 id="modalTitle">Event title</h2>
+        <div class="modal-meta" id="modalMeta"></div>
+        <p id="modalDescription"></p>
+        <div class="countdown" id="countdown"><span class="countdown-label">EVENT STARTS IN</span><div><strong id="days">00</strong><small>days</small><strong id="hours">00</strong><small>hrs</small><strong id="minutes">00</strong><small>mins</small></div></div>
+        <button class="btn btn-primary modal-register" id="modalRegister">Register for this event <span>↗</span></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="registrationModal" role="dialog" aria-modal="true" aria-labelledby="registrationTitle">
+    <div class="registration-modal">
+      <button class="modal-close" id="closeRegistration" aria-label="Close registration">×</button>
+      <div class="eyebrow">SAVE YOUR SPOT</div>
+      <h2 id="registrationTitle">You're one step away.</h2>
+      <p class="form-intro">Fill in your details and we'll save your registration.</p>
+      <form id="registrationForm" novalidate>
+        <label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" placeholder="Jane Smith" required minlength="2">
+        <label for="regEmail">Email address</label><input id="regEmail" name="email" type="email" placeholder="jane@example.com" required>
+        <label for="phone">Phone number</label><input id="phone" name="phone" type="tel" placeholder="10-digit mobile number" required>
+        <label for="selectedEvent">Selected event</label><select id="selectedEvent" name="event" required></select>
+        <p class="form-error" id="formError" role="alert"></p>
+        <button class="btn btn-primary form-submit" type="submit">Complete registration <span>↗</span></button>
+        <small class="privacy-note">Your details are stored locally in this demo browser.</small>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
